@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Greg Knapp: Website Building</title>
+
+<meta content="Greg Knapp" name="author">
+<meta content="Here's how to build your own .html website and host it on the University of Oregon server" name="description">
+<link rel="stylesheet" href="../knappstyle.css" type="text/css">
+</head>
+<body style="color: rgb(0, 0, 0); margin-left: auto; margin-right: auto;" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<h1 style="text-align: center;">Greg Knapp</h1>
+<div id="outer-tab-bar">
+<div class="table">
+<ul id="tab-bar">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../research.html">Research</a></li>
+<li><a href="../teaching.html">Teaching</a></li>
+<li><a href="../cv.html">CV</a></li>
+<li><a class="active" href="../how_tos.html">"How
+To"s&nbsp;</a></li>
+</ul>
+</div>
+</div>
+<div>
+<h2>Site Building </h2>
+<p> The information below was kindly written and shared by Katie
+Gedeon (UO Math PhD) before shared with me by Elisa
+Bellah (UO Math PhD). &nbsp;As a result, in any text after the
+"Shortcuts" header below, the pronoun "I" does not refer to me, it
+refers to Katie!</p>
+<p>I
+found this resource to be incredibly
+helpful
+and totally comprehensive. &nbsp;I'm still in the stage of using
+KompoZer for my editing and have not made full use of the guide below.
+&nbsp;Note that links that are no longer
+working have
+been struck through.</p>
+<p>Once you've built your site, you'll probably want it linked
+to your name in the Math Department GE Directory. &nbsp;Currently, <a href="https://math.uoregon.edu/profile/mcbrown">Mary Brown</a>
+is in charge of such things (by virtue of being in charge of probably
+everything in the UO math department).&nbsp; Just drop her an <a href="mailto:mcbrown@uoregon.edu">email</a> and
+provide her with your url.</p>
+<br>
+<h3>Shortcuts:</h3>
+<h4>
+<ul>
+<li>
+<p><a href="#GettingStarted">Getting Started</a></p>
+</li>
+<li>
+<p><a href="#Building">Building Your Site</a></p>
+</li>
+<li>
+<p><a href="#Uploading">Uploading Files</a></p>
+</li>
+<li>
+<p><a href="#Advanced">Advanced Editing</a></p>
+</li>
+<li>
+<p><a href="#Testing">Testing Your Site</a></p>
+</li>
+<li>
+<p><a href="#Terminal">Using Terminal</a></p>
+</li>
+</ul>
+</h4>
+<a name="GettingStarted"></a>
+<h3>Getting Started</h3>
+The first few steps I found on <a href="https://it.uoregon.edu/node/2804">it.uoregon.edu</a>
+and they are somewhat explained there. It is important to note that the
+location of your web page will be pages.uoregon.edu/''your DuckID'',
+without the quotation marks. The first thing you need to do enable
+shell access. Log into <a href="http://duckid.uoregon.edu/">duckid.uoregon.edu</a>,
+click ''Manage Optional Account Access'' and click the ''Enable shell
+access'' check box. Next you can log into shell. It's different for Mac
+vs. Windows users (and a lengthly explanation), so just go <a href="http://it.uoregon.edu/node/2930">here</a> to
+figure it out.
+<br>
+<a name="Building"></a>
+<h3>Building Your Site:</h3>
+<p>Now you need to actually write the code for your web page. If
+you're new to building a web site, I suggest using a WYSIWYG (What You
+See Is What You Get) program. There are a lot of free
+WYSIWYG programs out there. When I built my first site, I used <a href="http://www.kompozer.net/index.php">KompoZer</a>
+which is available for every platform, and I got a lot of help <a href="http://www.charlescooke.me.uk/web/ugs01.htm">here</a>.
+I also
+tried <a href="http://www.seamonkey-project.org/">SeaMonkey</a>
+and that was fine, though I preferred KompoZer. By using a WYSIWYG
+builder, you don't actually have to know how to write html code!
+However, the source code for your page ends up looking like a mess and
+if you ever tried to come back and edit the html, you'd probably end up
+scraping the whole project.<span style="font-weight: bold;"></span></p>
+<p><span style="font-weight: bold;"></span></p>
+<p><span style="font-weight: bold;"></span>Once
+you have the editor, you can start building. I really wanted mine
+to look pretty, so I tried (unsuccessfully) to use a web site template.
+At the time, I didn't understand CSS files and my guess is that, if
+you're a beginner, you won't either. I
+recommend spending some time looking at templates to help you decide
+what you want the overall feel to be. <strike>In case you're
+curious, you can take a look at my <a href="myoldstyle.html">old
+page style</a> (though note that some of the links no longer
+work).</strike></p>
+<p></p>
+<p>It is actually extremely easy to ''steal'' the design of a
+site that
+you like. For example, consider this page. Control-click (alternatively
+right-click if you own a PC) and ''View Page Source.'' Congratulations!
+You are now viewing the guts of my page. Simply copy/paste this into
+your favorite html editor (but be careful here since I use a CSS file).
+Note that even if you're using a program like KompoZer, you can still
+view the html of your site and paste this code in. <strike>For
+an example of a site that successfully uses the department's source
+code, check out Tyler's page</strike>. The department has moved
+to the UO Blogs style, but you could, for example, use <a href="http://pages.uoregon.edu/njp">Nick Proudfoot's web site</a>
+as an example of a clean, simple layout. You can also look at <a href="http://pages.uoregon.edu/brundan">Jon Brundan's web
+site</a> if you're curious as to what the department pages used
+to look like.</p>
+<p></p>
+<p>Make sure that whatever your home page is, it is saved as
+''index.html'' as this is how the server knows that this is to be your
+main page. What if you want to have other internal pages (i.e. my
+''Teaching'' and ''Research'' pages)? Create a new page in KompoZer, or
+whichever builder you are using. Suppose you name it ''teaching.html'',
+for your Teaching page. Then create a link from your home page (the
+index.html one), input your link text (''Teaching'' in this example),
+and put the link location as teaching.html. The code will look
+something like this: </p>
+<br>
+<code> &lt;a
+href="teaching.html"&gt;Teaching&lt;\a&gt; </code> <br>
+<br>
+<br>
+If you're using a WYSIWYG editor, creating a new link should be
+straightforward. Notice how I don't need to put the full address of the
+link. In KompoZer, you would make sure the box for ''URL is relative to
+page location'' is checked (if you can't or don't check it, then the
+program will check it for you later). Alternatively, you could click
+the file button and find the .html file that you want to link to.
+Suppose you want to upload a PDF of the course syllabus for your
+students. Simply create a link, set the link location to syllabus.pdf
+(or whatever you named your syllabus in your folder). <br>
+<br>
+For external links, such as Canvas or WebWork, set the link location to
+the normal url address. <br>
+<br>
+Do NOT try to ''publish'' no matter what program you are using. I tried
+several times in different programs unsuccessfully. Just save all of
+your html files, and I'd recommend saving them all into one folder. <br>
+<br>
+<b>If you're linking to a file, be careful with capitalization!</b>
+Different browsers read these things differently. If I'm going to
+create a link for the file named ''Quiz 1_Review Solutions.pdf'' on my
+computer, this is how the html code would look <br>
+<br>
+<code>&lt;a
+href="Quiz%201_Review%20Solutions.pdf"&gt;Quiz 1 Review -
+Solutions&lt;\a&gt;</code> <br>
+<br>
+My browser will show the link as "Quiz 1 Review - Solutions" as I have
+indicated. Notice how I dealt with the spaces in the name of the file,
+which is named ''Quiz 1_Review Solutions.pdf'' on my computer. When
+uploading this file, you also need to be careful about capitalization.
+It's usually not a problem if you use a program as I've outlined in the
+next section, but keep this in mind if you use Terminal.
+<br>
+<br>
+<a name="Uploading"></a>
+<h3>Uploading Files</h3>
+The last step is to actually upload your files to the
+server. I highly recommend using a program called <a href="https://filezilla-project.org/">FileZilla</a>.
+You'll want to download FileZilla Client, <b>not</b>
+Server. It's free and I've found it to be extremely easy to use. Once
+you've downloaded FileZilla, open it. You'll see four boxes at the top
+of the page; Host, Username, Password and Port. For Host, enter
+"sftp://shell.uoregon.edu" without the quotation marks. For Username
+and Password use your DuckId and for Port enter 22. <br>
+<br>
+On the left-hand side of your screen is the Local site. Here you will
+access the file on your computer that you wish to upload. For example,
+all of my web site files are in a folder called "Website" on my
+desktop. If I wanted to upload this page, I would click on the Desktop
+folder, and then Website. On the right-hand side, you'll see Remote
+site. This is the directory for your site. Open the ''public_html''
+file. <b>This is where you want to upload all of your files.</b>
+Suppose I wanted to upload this page. I would locate building.html in
+my Website folder on the left of my screen, then drag the file to the
+window on the right-hand side and drop it there. FileZilla uploads it
+for me! Since the file already existed in my public_html file,
+FileZilla will ask if I want to overwrite this file. From now on, when
+you open FileZilla, you can select sftp://''your
+DuckID''@shell.uoregon.edu from the drop down menu next to the
+Quickconnect button. <br>
+<br>
+Unless you prefer to do things a bit more by hand, I recommend using a
+program like FileZilla. On my Linux machine, I prefer to use Terminal.
+If you'd like help with Terminal, look <a href="#Terminal">below</a>.
+<br>
+<br>
+<a name="Advanced"></a>
+<h3>Advanced Editing</h3>
+When you're ready to get serious about building a web site, come back
+to this section. <br>
+<br>
+Ready? Good. <br>
+<br>
+I wasn't satisfied with the basic (read: ugly) design of my first page
+and I had always intended to invest a large amount of time into
+developing a better one. The product is what you're looking at now.
+There's no shame in having a basic and functional web site, especially
+if you are new to building. But having a well-developed site will
+certainly help when you start to apply for jobs. Additionally,
+developing your skills in graduate school will serve you well in the
+future.
+<br>
+<br>
+The first step toward creating a ''prettier'' web site is understanding
+how useful CSS files are. Most of you are familiar with LaTeX so I
+offer the following analogy. Having a CSS file is similar to having a
+.sty file. Instead of having a messy preamble with a bunch of packages
+and commands, you can tell your favorite TeX editor to use a single
+package. Changing a single command in your .sty file will change each
+document that references it. This is the same way that a CSS file
+works. Instead of clogging up your html, you can reference a single CSS
+file. Note that this also means you'll need to upload your CSS file to
+your public_html folder in addition to your html files. <br>
+<br>
+Now just as when you first learned TeX you looked at a bunch of other
+people's TeX files, so too is how you learn to use CSS. Again, I
+recommend finding a CSS template that you like and adjusting it to suit
+your needs. At the bottom of this page there is a link to the site from
+which I got this template. If you do in fact use a template, always
+make sure that you follow the wishes of th developer, especially if the
+template is free for public use. Editing a CSS file or building an html
+file that uses a CSS file requires some knowledge of html. Again, play
+around a bit and see what works. <a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">Here</a>
+is a wonderful CSS cheat sheet. <br>
+<br>
+You'll also need an html editor. I currently use <a href="https://www.geany.org/">Geany</a>, primarily
+because of the syntax highlighting (which also comes in handy for
+writing SageMath code). I would also recommend <a href="https://netbeans.org/downloads/">NetBeans</a>,
+which is good for editing many different types of files, including CSS
+files. It is very helfpul for beginners.
+<br>
+<br>
+<br>
+<a name="Testing"></a>
+<h3>Testing Your Site</h3>
+If you're using a WYSIWYG editor, then your page is pretty much what
+you see. Even before you upload your files, you can see what your pages
+look like. Simply click to open them on your computer and your favorite
+browser will open the local file. If you're using complicated code, you
+need to check the look of your site on every web browser that you can
+find. Different browsers read code differently. Most of the time it
+will be fine, but you should check to be sure. Especially check
+Internet Explorer. To paraphrase <a href="http://pages.uoregon.edu/raies">Dan</a>, things
+don't always render properly on Internet Explorer. If you're having the
+same problems then I can help; you can download <a href="http://www.google.com/chrome">Google Chrome</a>
+or <a href="http://www.mozilla.org">Mozilla Firefox</a>
+and use a real browser. <br>
+<br>
+<a name="Terminal"></a>
+<h3>Using Terminal</h3>
+When I was first starting out, I uploaded all my files with Terminal
+because I didn't know any better. It worked just fine, and it forced me
+to learn something new, but FileZilla is much more user-friendly,
+particularly if you are new to coding.
+In general, I use Terminal. The following will be useful if either you
+decide to use Terminal, or if you are away from your usual computer and
+need to edit your website.
+<br>
+<br>
+<h4>Getting Started with Terminal</h4>
+Open Terminal in your computer. If Terminal was already
+open, and if you are already logged into ssh (from setting up your
+site) type ''exit''. If you're not sure, close Terminal and reopen it.
+After each of these following steps, hit the enter/return button. <br>
+<br>
+Type in <br>
+<br>
+<code>sftp yourDuckId@shell.uoregon.edu</code> <br>
+<br>
+Note that you can't cut and paste in Terminal. Make sure you leave a
+space between sftp and the rest. Then type in your password; it won't
+actually show up as you type it so don't be alarmed!
+<br>
+<br>
+<h4>Simple Method for Uploading Files</h4>
+Determine the path to the file you want to upload. You can
+do this by control-clicking on the filed you want and selecting ''Get
+Info.'' Under ''Where,'' it should give you a path that looks similar
+to this: /Users/kgedeon/Desktop/Website (my files are in a folder named
+''Website'' that I keep on my desktop). Note that it is a coincidence
+that my MacBook username and DuckId are the same. Since I want to
+upload this page, I'm going to use this full path:
+/Users/kgedeon/Desktop/Website/building.html <br>
+<br>
+My next step in terminal is to type <br>
+<br>
+<code>put /Users/kgedeon/Desktop/Website/building.html public_html</code>
+<br>
+<br>
+Again, be careful to include spaces. This tells Terminal to ``put'' or
+upload the specified file in the specified place. Now this page is
+accessible at pages.uoregon.edu/kgedeon/building.html!
+<br>
+<br>
+<h4>Alternate Method for Uploading Files</h4>
+This method is a little more complex as it involves diving
+into files on your computer via Terminal. I think overall it is neater
+than the simple method and much faster. Since I keep all my files for
+my web site in a folder named ''Website'' on my desktop, I will present
+the method that works for me. Adjust your paths to suit your needs.
+<br>
+<br>
+First let's talk about the commands we'll use to upload files. <br>
+<br>
+<code>lcd folder</code> <br>
+<br>
+This tells terminal to look in the place called ''folder.'' Here I
+would replace ''folder'' with ''desktop,'' ''website,'' ''teaching
+stuff,'' etc. We've already seen that spaces are special in Terminal.
+So if I actually wanted to go to the folder called ''teaching stuff''
+on my desktop, I would type <br>
+<br>
+<code>lcd desktop<br>
+lcd ''teaching stuff''</code> <br>
+<br>
+hitting the Enter button after each line. ''lcd'' stands for ''local
+change directory.'' If we want to change the directory on the server,
+we use <br>
+<br>
+<code>cd public_html</code> <br>
+<br>
+Remember that we want to upload all of our files into this folder. So
+this should be the only time we use the ''cd'' command. Once you've
+used ''lcd'' to look in the correct folder on your laptop and you've in
+your public_html folder, then you can upload files. If I was going to
+upload this page, I would now type <br>
+<br>
+<code>put building.html</code> <br>
+<br>
+into Terminal and hit enter. Maybe I want to go back out to the desktop
+so I can upload a file there or look into a different folder. I would
+use the following command <br>
+<br>
+<code>lcd ..</code> <br>
+<br>
+This tells Terminal to go ''up'' one folder. If you want to see all of
+the files in a particular folder, Terminal can show you. For that we
+would use <br>
+<br>
+<code>lls</code> <br>
+<br>
+This would list all files in the local folder. We can similarly use <br>
+<br>
+<code>ls</code> <br>
+<br>
+Let's see all of these steps together. Here is what a normal sequence
+of commands would be if I wanted to upload this page onto my site:<br>
+<br>
+<code> lcd desktop<br>
+lcd website <br>
+cd public_html <br>
+put building.html
+</code> <br>
+<br>
+Again, I would hit enter after each line. Suppose I had prepared some
+review for my class and I wanted to post the PDF online. My Terminal
+commands might look something like this:<br>
+<br>
+<code> lcd desktop<br>
+lcd ''teaching stuff''<br>
+lcd ''math 243''<br>
+lcd ''quizzes and worksheets''<br>
+cd public_html<br>
+put ''Quiz 1 Review Solutions.pdf'' </code> <br>
+<br>
+You can see that I used quotation marks when necessary. Suppose that
+I'm currently ''looking'' in my teaching stuff folder, but now I want
+to upload something from my website folder. My Terminal commands might
+look something like this:<br>
+<br>
+<code> lcd desktop<br>
+lcd ''teaching stuff''<br>
+lcd ''math 243''<br>
+lcd ''quizzes and worksheets''<br>
+cd public_html<br>
+put ''Quiz 1 Review Solutions.pdf''<br>
+lcd ..<br>
+lcd ..<br>
+lcd ..<br>
+lcd website<br>
+put building.html </code> <br>
+<br>
+Note how many times I had to use the ''lcd ..'' command! Often I'll
+loose track of how many times I've used the command. This is where
+''lls'' comes in handy.
+<br>
+<br>
+A plus side with this method is now that Terminal is 'looking' in the
+right folders, you can upload a whole bunch of files quickly. This
+comes in handy when updating many pages at once.<br>
+<br>
+<h4>Links for More Help with Terminal</h4>
+<a href="http://answers.stat.ucla.edu/groups/answers/wiki/7a848/">http://answers.stat.ucla.edu/groups/answers/wiki/7a848/</a>
+<br>
+<a href="http://www.hosting.com/support/ftp/ftp-from-mac-osx-terminal">http://www.hosting.com/support/ftp/ftp-from-mac-osx-terminal</a>
+<div class="col float-left space-sep">
+<p>© copyright 2016 Katie Gedeon</p>
+</div>
+</div>
+</body></html>
